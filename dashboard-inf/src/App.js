@@ -7,6 +7,7 @@ import DashboardPage from "./page/DashboardPage";
 import UserControlPage from "./page/UserControlPage";
 import SidebarMenu from "./component/SidebarMenu";
 import StatisticsPage from "./page/StatisticsPage";
+import HomePage from "./page/homePage";
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
@@ -31,11 +32,8 @@ function App() {
           <Route path="/dashboard" element={<DashboardPage />}>
             <Route path="usercontrol" element={<UserControlPage />} />
             <Route path="statistics" element={<StatisticsPage />} />
+            <Route path="home" element={<HomePage />} />
           </Route>
-          {/* <Route path="/dashboard/UserControl" element={<UserControlPage />} /> */}
-          {/* <Route path='dashboard/ViewBook/:id' element={<ViewBook/>}/>
-        <Route path='dashboard/UpdateBook/:id' element={<UpdateBook/>}/>
-      <Route path='dashboard/DeleteBook/:id' element={<DeleteBook/>}/> */}
         </Routes>
       </BrowserRouter>
     </div>

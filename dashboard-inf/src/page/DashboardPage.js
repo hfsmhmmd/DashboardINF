@@ -45,7 +45,7 @@ function DashboardPage() {
           onChange={toggleSidebar}
         />
 
-        <div className="drawer-content flex flex-row items-start justify-center ">
+        <div className="drawer-content h-screen flex flex-row items-start justify-center py-2 px-3 bg-gray-100 ">
           {/* Page content here */}
           <Outlet></Outlet>
           {/* {contentShown === '' && <UserControlPage/>} */}
@@ -55,7 +55,7 @@ function DashboardPage() {
         </div>
 
         <div className="drawer-side">
-          <div className="menu p-4 w-80 min-h-full bg-indigo-700 text-base-content">
+          <div className="menu p-4 w-64 min-h-full bg-indigo-700 text-base-content">
             {/* Sidebar content here */}
             <img src={logoInfPutih}></img>
             <SidebarMenu />
@@ -70,13 +70,6 @@ function DashboardPage() {
           </div>
         </div>
       </div>
-
-      {/* <Routes> */}
-      {/* <Route path="dashboard/UserControl" element={<UserControlPage />} /> */}
-      {/* <Route path='dashboard/ViewBook/:id' element={<ViewBook/>}/> */}
-      {/* <Route path='dashboard/UpdateBook/:id' element={<UpdateBook/>}/> */}
-      {/* <Route path='dashboard/DeleteBook/:id' element={<DeleteBook/>}/>\  */}
-      {/* </Routes> */}
     </div>
   );
 }

@@ -15,12 +15,12 @@ import NavbarMenu from "../component/NavbarMenu";
 
 function UserControlPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-  const [userList, setuserList] = useState([]);
   const toggleSidebar = () => {
     console.log("isSidebarOpen", isSidebarOpen);
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const [userList, setuserList] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       try {
