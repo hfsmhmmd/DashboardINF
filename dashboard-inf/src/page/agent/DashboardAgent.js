@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
-import SidebarMenu from "../component/SidebarMenu";
-import UserControlPage from "./UserControlPage";
-import NavbarMenu from "../component/NavbarMenu";
+import SidebarMenu from "../../component/SidebarMenu";
+import UserControlPage from ".././UserControlPage";
+import NavbarMenu from "../../component/NavbarMenu";
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
   AiOutlineUserSwitch,
 } from "react-icons/ai";
 import { Routes, Route, Outlet } from "react-router-dom";
-import logoInfPutih from "../assets/logoInfPutih.png";
-function DashboardPage() {
+import logoInfPutih from "../../assets/logoInfPutih.png";
+
+function DashboardAgent() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [contentShown, setContentShown] = useState("");
 
@@ -46,12 +47,7 @@ function DashboardPage() {
         />
 
         <div className="drawer-content h-screen flex flex-row items-start justify-center py-2 px-3 bg-gray-100 ">
-          {/* Page content here */}
           <Outlet></Outlet>
-          {/* {contentShown === '' && <UserControlPage/>} */}
-          {/* {contentShown === 'componentB' && <ComponentB />}
-                {contentShown === 'componentC' && <ComponentC />}
-           */}
         </div>
 
         <div className="drawer-side">
@@ -74,4 +70,4 @@ function DashboardPage() {
   );
 }
 
-export default DashboardPage;
+export default DashboardAgent;

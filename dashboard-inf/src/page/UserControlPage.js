@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import SidebarMenu from "../component/SidebarMenu";
+import ReactPaginate from "react-paginate";
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
-  AiOutlineUserSwitch,
+  AiOutlineUserAdd,
   AiFillFilter,
   AiFillEye,
   AiFillEdit,
@@ -45,11 +46,12 @@ function UserControlPage() {
   }
 
   return (
-    <div className=" w-full">
+    <div className="h-screen w-full">
       <NavbarMenu />
       <div className="flex flex-col items-start space-y-4 ml-4 w-11/12">
         <h1 className="text-2xl ml-2">User Control</h1>
-        <div className="flex flex-row items-start justfiy-center space-x-4">
+        <div className="flex flex-row space-x-4  items-center justfiy-evenly  w-full">
+          {/* <div className="flex flex-row  spcae-x-6 bg-gray-200  w-full "> */}
           <input
             type="text"
             placeholder="Search"
@@ -58,15 +60,20 @@ function UserControlPage() {
           <button className="btn">
             Filter <AiFillFilter fill="white" />{" "}
           </button>
+          {/* </div>
+          <div className="bg-gray-100 w-2/4 flex flex-row items-center justify-evenly"> */}
+          <button className="btn bg-yellow-300 text-black hover:bg-yellow-500 border-0">
+            Create tenant Account <AiOutlineUserAdd fill="black" />
+          </button>
+          <button className="btn bg-green-400 text-black hover:bg-green-600 border-0">
+            Create Agent Account <AiOutlineUserAdd fill="black" />{" "}
+          </button>
+          {/* </div> */}
         </div>
         <table className="table ">
           <thead>
             <tr>
-              <th>
-                {/* <label>
-            <input type="checkbox" className="checkbox" />
-          </label> */}
-              </th>
+              <th></th>
               <th> # </th>
               <th>Name </th>
               <th> Origin </th>
@@ -76,7 +83,7 @@ function UserControlPage() {
             </tr>
           </thead>
 
-          <tbody>
+          <tbody className="">
             {userList
               ? userList.map((item, index) => (
                   <tr key={index}>

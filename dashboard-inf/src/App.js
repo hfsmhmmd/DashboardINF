@@ -13,6 +13,7 @@ import {
   AiFillCaretRight,
   AiOutlineUserSwitch,
 } from "react-icons/ai";
+import DashboardAgent from "./page/agent/DashboardAgent";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -29,11 +30,16 @@ function App() {
         <Routes>
           <Route exact path="/" element={<LoginPage />} />
 
-          <Route path="/dashboard" element={<DashboardPage />}>
+          <Route path="/dashboard/super" element={<DashboardPage />}>
             <Route path="usercontrol" element={<UserControlPage />} />
             <Route path="statistics" element={<StatisticsPage />} />
             <Route path="home" element={<HomePage />} />
           </Route>
+
+          <Route path="/dashboard/agent" element={<DashboardAgent />}>
+            <Route path="AGhome" element={<HomePage />} />
+          </Route>
+          <Route />
         </Routes>
       </BrowserRouter>
     </div>

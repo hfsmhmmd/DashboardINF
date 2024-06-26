@@ -12,15 +12,15 @@ function AgentRowInfo(props) {
   return (
     <div className="flex flex-row justify-between px-2 ">
       <div className="flex flex-row space-x-2 items-center justify-betweeen">
-        <p>{num}</p>
+        {/* <p>{num}</p> */}
         <div className="avatar">
           <div className="w-10 rounded-full">
             <img src={image} />
           </div>
         </div>
         <div className="flex flex-col justify-evenly">
-          <b className=""> {name}</b>
-          <p> {species}</p>
+          <b className="text-sm"> {name}</b>
+          <p className="text-xs"> {species}</p>
         </div>
       </div>
       <button>

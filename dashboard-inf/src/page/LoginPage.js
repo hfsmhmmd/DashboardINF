@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import SideLogin from "../assets/SideLogin.png";
 import backgroundMask from "../assets/backgroundMask.png";
+import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [userName, setuserName] = useState("");
@@ -111,12 +112,31 @@ function LoginPage() {
                 </div>
               </div>
               <div className="card-actions justify-center w-4/5">
-                <button
-                  className="btn btn-active w-full bg-indigo-700 rounded-xl max-w-md"
-                  type="submit"
-                >
-                  <span className="text-white"> Login </span>
-                </button>
+                <Link className="w-full" to={`/dashboard/super/home`}>
+                  <button
+                    className="btn btn-active w-full bg-indigo-700 rounded-xl max-w-md"
+                    type="submit"
+                  >
+                    <span className="text-white"> Login </span>
+                  </button>
+                </Link>
+                {/* <div className="w-full  flex flex-row justify-center items-center rounded-xl"> */}
+                <Link className="w-full " to={`/dashboard/agent/aghome`}>
+                  <button
+                    className="btn btn-active w-full bg-black rounded-xl max-w-md"
+                    type="submit"
+                  >
+                    <span className="text-white">Agent Login </span>
+                  </button>
+                </Link>
+                <Link className="w-full " to={`/dashboard/`}>
+                  <button
+                    className="btn btn-active w-full bg-black rounded-xl max-w-md"
+                    type="submit"
+                  >
+                    <span className="text-white">Tenant Login </span>
+                  </button>
+                </Link>
               </div>
             </div>
           </form>

@@ -10,7 +10,7 @@ function SidebarMenu() {
     <div>
       <ul className="menu rounded-box space-y-4">
         <li>
-          <Link to={`/dashboard`}>
+          <Link to={`/dashboard/super/home `}>
             <AiFillHome
               style={{
                 fill: "white",
@@ -48,7 +48,7 @@ function SidebarMenu() {
           </details>
         </li>
         <li>
-          <Link to={`/dashboard/UserControl`}>
+          <Link to={`/dashboard/super/UserControl`}>
             <AiOutlineUserSwitch
               style={{
                 fill: "white",

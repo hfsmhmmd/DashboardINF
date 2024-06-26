@@ -32,7 +32,7 @@ function AgentListCard() {
         <button>view all</button>
       </div>
 
-      <div className="flex h-4/5 max-h-screen flex-col overflow-y-scroll overflow-x-hidden">
+      <div className="flex h-4/5 max-h-screen flex-col space-y-2 overflow-y-scroll overflow-x-hidden">
         {userList.map((agent, index) => (
           <AgentRowInfo details={agent} />
         ))}
