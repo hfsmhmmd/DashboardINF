@@ -14,6 +14,7 @@ import {
   AiOutlineUserSwitch,
 } from "react-icons/ai";
 import DashboardAgent from "./page/agent/DashboardAgent";
+import WidgetPhone from "./component/Agent/WidgetPhone";
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -37,7 +38,7 @@ function App() {
           </Route>
 
           <Route path="/dashboard/agent" element={<DashboardAgent />}>
-            <Route path="AGhome" element={<HomePage />} />
+            <Route path="AGhome" element={<WidgetPhone />} />
           </Route>
           <Route />
         </Routes>

@@ -46,7 +46,7 @@ function DashboardAgent() {
           onChange={toggleSidebar}
         />
 
-        <div className="drawer-content h-screen flex flex-row items-start justify-center py-2 px-3 bg-gray-100 ">
+        <div className="drawer-content h-screen flex flex-row items-start justify-center py-2 px-3 bg-white ">
           <Outlet></Outlet>
         </div>
 
