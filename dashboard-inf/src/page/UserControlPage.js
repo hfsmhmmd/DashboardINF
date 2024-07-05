@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SidebarMenu from "../component/SidebarMenu";
-import ReactPaginate from "react-paginate";
+// import ReactPaginate from "react-paginate";
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
@@ -11,8 +11,8 @@ import {
   // AiFillEye,
   AiFillDelete,
 } from "react-icons/ai";
-
 import NavbarMenu from "../component/NavbarMenu";
+import { Link } from "react-router-dom";
 
 function UserControlPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -62,13 +62,16 @@ function UserControlPage() {
           </button>
           {/* </div>
           <div className="bg-gray-100 w-2/4 flex flex-row items-center justify-evenly"> */}
-          <button className="btn bg-yellow-300 text-black hover:bg-yellow-500 border-0">
-            Create tenant Account <AiOutlineUserAdd fill="black" />
-          </button>
+          <Link to={`/dashboard/super/createuser/tenant`}>
+            <button className="btn bg-yellow-300 text-black hover:bg-yellow-500 border-0">
+              Create tenant Account <AiOutlineUserAdd fill="black" />
+            </button>
+          </Link>
+          <Link to=""></Link>
+
           <button className="btn bg-green-400 text-black hover:bg-green-600 border-0">
             Create Agent Account <AiOutlineUserAdd fill="black" />{" "}
           </button>
-          {/* </div> */}
         </div>
         <table className="table ">
           <thead>

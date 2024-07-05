@@ -32,14 +32,14 @@ function SidebarMenu() {
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
               <li>
-                <Link to={`/dashboard`}>
-                  <AiFillDatabase
-                    style={{
-                      fill: "white",
-                    }}
-                  />
-                  <h2 className="sidebara_list_text">PBX </h2>
-                </Link>
+                  <Link to={`/dashboard`}>
+                    <AiFillDatabase
+                      style={{
+                        fill: "white",
+                      }}
+                    />
+                    <h2 className="sidebara_list_text">PBX </h2>
+                  </Link>
               </li>
               <li>
                 <a>Item 2</a>

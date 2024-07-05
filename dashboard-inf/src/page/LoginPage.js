@@ -60,14 +60,10 @@ function LoginPage() {
             class="absolute top-0 left-0"
             src={backgroundMask}
             alt="Workplace"
-            // width="600"
+            width="10700"
           />
 
-          <img
-            class=" absolute top-0 left-0"
-            src={SideLogin}
-            // width="600"
-          />
+          <img class=" absolute top-0 left-0" src={SideLogin} width="1060" />
         </div>
       </div>
       <div className="bg-white w-5/12 flex flex-col justify-center items-center   p-4">

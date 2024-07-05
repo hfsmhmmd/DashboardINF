@@ -7,7 +7,7 @@ import {
   AiFillCaretRight,
   AiOutlineUserSwitch,
 } from "react-icons/ai";
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import logoInfPutih from "../../assets/logoInfPutih.png";
 
 function DashboardAgent() {
@@ -53,7 +53,11 @@ function DashboardAgent() {
         <div className="drawer-side">
           <div className="menu p-4 w-64 min-h-full bg-indigo-700 text-base-content">
             {/* Sidebar content here */}
-            <img src={logoInfPutih}></img>
+
+            <Link to={`/dashboard/agent/aghome `}>
+              <img src={logoInfPutih}></img>
+            </Link>
+
             <SidebarMenu />
             <button
               className="btn btn-primary drawer-button "

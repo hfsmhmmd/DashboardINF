@@ -11,14 +11,13 @@ import HomePage from "./page/homePage";
 
 import DashboardAgent from "./page/agent/DashboardAgent";
 import HomePageAgent from "./page/agent/HomePageAgent";
-
+import CreateUserForm from "./component/CreateUserForm";
 
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
   AiOutlineUserSwitch,
 } from "react-icons/ai";
-
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -37,6 +36,7 @@ function App() {
 
           <Route path="/dashboard/super" element={<DashboardPage />}>
             <Route path="usercontrol" element={<UserControlPage />} />
+            <Route path="createuser/tenant" element={<CreateUserForm />} />
             <Route path="statistics" element={<StatisticsPage />} />
             <Route path="home" element={<HomePage />} />
           </Route>

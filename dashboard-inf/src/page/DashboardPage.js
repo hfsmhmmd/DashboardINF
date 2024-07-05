@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from "react";
 import SidebarMenu from "../component/SidebarMenu";
+
 import UserControlPage from "./UserControlPage";
 import NavbarMenu from "../component/NavbarMenu";
+
 import {
   AiFillCaretLeft,
   AiFillCaretRight,
   AiOutlineUserSwitch,
 } from "react-icons/ai";
-import { Routes, Route, Outlet } from "react-router-dom";
+import { Routes, Route, Outlet, Link } from "react-router-dom";
 import logoInfPutih from "../assets/logoInfPutih.png";
 function DashboardPage() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -53,11 +55,14 @@ function DashboardPage() {
                 {contentShown === 'componentC' && <ComponentC />}
            */}
         </div>
-
         <div className="drawer-side">
           <div className="menu p-4 w-64 min-h-full bg-indigo-700 text-base-content">
             {/* Sidebar content here */}
-            <img src={logoInfPutih}></img>
+
+            <Link to={`/dashboard/super/home`}>
+              <img src={logoInfPutih}></img>
+            </Link>
+
             <SidebarMenu />
             <button
               className="btn btn-primary drawer-button "
@@ -65,7 +70,7 @@ function DashboardPage() {
             >
               Close Sidebar
               <AiFillCaretLeft />
-              {/* {isSidebarOpen ? 'Close drawer' : 'Open drawer'} */}
+            
             </button>
           </div>
         </div>
