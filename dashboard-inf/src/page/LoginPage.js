@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import SideLogin from "../assets/SideLogin.png";
 import backgroundMask from "../assets/backgroundMask.png";
-import { Link } from "react-router-dom";
 
 function LoginPage() {
   const [userName, setuserName] = useState("");
