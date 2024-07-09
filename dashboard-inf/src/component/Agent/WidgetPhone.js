@@ -104,11 +104,11 @@ function WidgetPhone() {
   // };
 
   return (
-    <div className="border-2 border-black w-72 h-96  rounded-xl shadow-xl ">
+    <div className="border-2 border-black w-80 h-3/5  rounded-xl shadow-xl ">
       {isCalling ? (
-        <div className="card-body flex flex-col justify-between items-center   w-72 h-full">
+        <div className="card-body flex flex-col justify-between items-center ">
           <div className="h-2/4 ">
-            <h1 className="font-bold text-xl "> {destinationNumber}</h1>
+            <h1 className="font-bold text-xl  "> {destinationNumber}</h1>
           </div>
           <OnGoingCallCard onHangUp={handleEndCall} />
         </div>
@@ -132,52 +132,50 @@ function WidgetPhone() {
           </form>
         </div>
       ) : (
-        <div className="card-body  ">
+        <div className="card-body h-full flex flex-col ">
           <form onSubmit={handleSubmitRegister}>
+            <div className="flex flex-col justify-center items-center">
+              <h2 className="card-title"> Vonage Call </h2>
+            </div>
+
             <div className="space-y-2">
-              <div className="flex flex-col justify-center items-center">
-                <h2 className="card-title"> Vonage Call </h2>
-              </div>
-
-              <div className="space-y-2">
-                <div className="flex flex-col space-y-1 items-start justify-evenly">
-                  <h2>Nama Lengkap</h2>
-                  <input
-                    type="text"
-                    required
-                    className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                    onChange={handleUsernameChange}
-                  />
-                </div>
-
-                <div className="flex flex-col space-y-1 items-start justify-evenly">
-                  <h2>Email</h2>
-                  <input
-                    type="text"
-                    required
-                    className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                    onChange={handlePasswordChange}
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col space-y-1 items-startjustify-evenly">
-                <h2>No Handphone</h2>
+              <div className="flex flex-col space-y-1 items-start justify-evenly">
+                <h2>Nama Lengkap</h2>
                 <input
-                  type="number"
+                  type="text"
                   required
-                  className="input input-bordered w-full border-black max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                  onChange={handlePhoneNumberChange}
+                  className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                  onChange={handleUsernameChange}
                 />
               </div>
 
-              <div className="card-actions justify-center">
-                <button
-                  className="btn btn-active w-full bg-green-400 rounded-xl hover:bg-green-600"
-                  type="submit"
-                >
-                  <span className="text-black">Submit</span>
-                </button>
+              <div className="flex flex-col space-y-1 items-start justify-evenly">
+                <h2>Email</h2>
+                <input
+                  type="text"
+                  required
+                  className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                  onChange={handlePasswordChange}
+                />
               </div>
+            </div>
+            <div className="flex flex-col space-y-1 items-start justify-evenly">
+              <h2>No Handphone</h2>
+              <input
+                type="number"
+                required
+                className="input input-bordered w-full border-black max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                onChange={handlePhoneNumberChange}
+              />
+            </div>
+
+            <div className="card-actions justify-center">
+              <button
+                className="btn btn-active w-full bg-green-400 rounded-xl hover:bg-green-600"
+                type="submit"
+              >
+                <span className="text-black">Submit</span>
+              </button>
             </div>
           </form>
         </div>

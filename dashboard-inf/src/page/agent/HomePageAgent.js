@@ -7,29 +7,29 @@ function HomePageAgent() {
   return (
     <div className="w-full">
       HomePageAgent
-      <div className="drawer drawer-end">
+      <div className="drawer drawer-end overflow-y-hidden">
         <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content w-full h-screen">
           {/* Page content here */}
 
           <label
             htmlFor="my-drawer-4"
-            className="drawer-button btn border-2 border-purple-500 "
+            className="drawer-button btn border-2 border-purple-500 bg-white"
           >
             <span>
               {/* <AiTwotonePhone size={36}/> */}
-              <AiOutlinePhone size={34} fill="#9c27b0" />
+              <AiOutlinePhone size={34} fill="#A020F0" />
             </span>
           </label>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side ">
           <label
             htmlFor="my-drawer-4"
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-base-200 text-base-content min-h-full w-2/6 p-4  ">
-            <div className="flex flex-col justify-center items-center bg-white">
+          <ul className="menu bg-white text-base-content min-h-full w-2/6  ">
+            <div className="flex flex-col justify-start items-center bg-white h-screen">
               <WidgetPhone />
             </div>
           </ul>
