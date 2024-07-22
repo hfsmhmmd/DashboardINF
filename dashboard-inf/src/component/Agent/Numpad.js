@@ -22,14 +22,19 @@ function Numpad({ onNumberClick, onClear, onSubmit }) {
           >
             {row.map((num) => (
               <button key={num} onClick={(e) => onNumberClick(e, num)}>
-                <kbd className="kbd w-12 h-12 rounded-xl shadow-md bg-gray-100">
+                <div className="kbd  bg-gray-100   w-12 h-12 rounded-3xl border-2 border-violet-400 shadow-md focus:bg-gray-100 ">
                   {num}
-                </kbd>
+                </div>
               </button>
             ))}
           </div>
         ))}
-
+        <button onClick={(e) => onSubmit(e)}>
+          <div className="rounded-xl flex flex-col kbd w-16 h-12 bg-white border-2  border-green-700 text-black">
+            <AiOutlinePhone fill="#00000" />
+            Call
+          </div>
+        </button>
         <div className="space-x-2 flex justify-center">
           <button onClick={(e) => onClear(e)}>
             <div className="flex flex-col kbd w-16 h-12 bg-red-400">
@@ -37,18 +42,18 @@ function Numpad({ onNumberClick, onClear, onSubmit }) {
               Clear
             </div>
           </button>
-          <button onClick={(e) => onSubmit(e)}>
-            <div className="rounded-xl flex flex-col kbd w-16 h-12 bg-green-400">
-              <AiOutlinePhone />
-              call
+
+          <button>
+            <div className=" rounded-xl flex flex-col kbd w-16 h-12 border-2 border-gray-400 bg-gray-200">
+              Back
             </div>
           </button>
-          <button>
+          {/* <button>
             <div className=" rounded-xl flex flex-col kbd w-16 h-12 border-2 border-gray-400 bg-gray-200 ">
               <BsArrowBarLeft />
               Erase
             </div>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

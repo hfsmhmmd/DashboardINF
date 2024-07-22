@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Numpad from "./Numpad";
 import OnGoingCallCard from "./OnGoingCallCard";
+import VonageClient from "@vonage/client-sdk";
+import VonageClientComponent from "./VonageClientComp";
 
 function WidgetPhone() {
   const [userName, setuserName] = useState("");
@@ -104,8 +106,8 @@ function WidgetPhone() {
   // };
 
   return (
-    <div className="border-2 border-black w-80 h-3/5  rounded-xl shadow-xl ">
-      {isCalling ? (
+    <div className="border-4 border-indigo-600 w-80 h-3/5  rounded-xl shadow-xl">
+      {/* {isCalling ? (
         <div className="card-body flex flex-col justify-between items-center ">
           <div className="h-2/4 ">
             <h1 className="font-bold text-xl  "> {destinationNumber}</h1>
@@ -113,8 +115,12 @@ function WidgetPhone() {
           <OnGoingCallCard onHangUp={handleEndCall} />
         </div>
       ) : isSubmited ? (
-        <div className="card-body ">
-          <form onSubmit={handleNumberSubmit} name="submitCall">
+        <div className="card-body flex flex-col h-full">
+          <form
+            className="h-full flex flex-col justify-evenly "
+            onSubmit={handleNumberSubmit}
+            name="submitCall"
+          >
             <input
               type="text"
               value={destinationNumber}
@@ -125,61 +131,64 @@ function WidgetPhone() {
               placeholder="Enter number"
             />
             <Numpad
-              onNumberClick={handleNumberClick}
+              onNumberClick={handleNumberClick}       
               onClear={handleClear}
               onSubmit={handleSubmit}
             />
           </form>
         </div>
       ) : (
-        <div className="card-body h-full flex flex-col ">
-          <form onSubmit={handleSubmitRegister}>
-            <div className="flex flex-col justify-center items-center">
-              <h2 className="card-title"> Vonage Call </h2>
-            </div>
+        <div className="card-body h-full  ">
+          <div className="flex flex-col justify-center items-center">
+            <h2 className="card-title"> Vonage Call </h2>
+          </div>
 
-            <div className="space-y-2">
-              <div className="flex flex-col space-y-1 items-start justify-evenly">
-                <h2>Nama Lengkap</h2>
-                <input
-                  type="text"
-                  required
-                  className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                  onChange={handleUsernameChange}
-                />
+          <form className="h-full" onSubmit={handleSubmitRegister}>
+            <div className="flex flex-col justify-evenly  h-full     ">
+              <div className="space-y-2">
+                <div className="flex flex-col space-y-1 items-start justify-evenly">
+                  <h2>Nama Lengkap</h2>
+                  <input
+                    type="text"
+                    required
+                    className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                    onChange={handleUsernameChange}
+                  />
+                </div>
+
+                <div className="flex flex-col space-y-1 items-start justify-evenly">
+                  <h2>Email</h2>
+                  <input
+                    type="text"
+                    required
+                    className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                    onChange={handlePasswordChange}
+                  />
+                </div>
+                <div className="flex flex-col space-y-1 items-start justify-evenly">
+                  <h2>No Handphone</h2>
+                  <input
+                    type="number"
+                    required
+                    className="input input-bordered w-full border-black max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
+                    onChange={handlePhoneNumberChange}
+                  />
+                </div>
               </div>
 
-              <div className="flex flex-col space-y-1 items-start justify-evenly">
-                <h2>Email</h2>
-                <input
-                  type="text"
-                  required
-                  className="input input-bordered border-black w-full  max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                  onChange={handlePasswordChange}
-                />
+              <div className="card-actions justify-center">
+                <button
+                  className="btn btn-active w-full bg-indigo-700 rounded-xl hover:bg-green-600  "
+                  type="submit"
+                >
+                  <span className="text-white">Submit</span>
+                </button>
               </div>
-            </div>
-            <div className="flex flex-col space-y-1 items-start justify-evenly">
-              <h2>No Handphone</h2>
-              <input
-                type="number"
-                required
-                className="input input-bordered w-full border-black max-w-xs bg-white focus:bg-gray-300 hover:bg-gray-200 "
-                onChange={handlePhoneNumberChange}
-              />
-            </div>
-
-            <div className="card-actions justify-center">
-              <button
-                className="btn btn-active w-full bg-green-400 rounded-xl hover:bg-green-600"
-                type="submit"
-              >
-                <span className="text-black">Submit</span>
-              </button>
             </div>
           </form>
         </div>
-      )}
+      )} */}
+      <VonageClientComponent />
     </div>
   );
 }
