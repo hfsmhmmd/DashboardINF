@@ -78,7 +78,7 @@ function LoginPage() {
               {/* </div> */}
 
               <div className="space-y-4 justify-center w-4/5 ">
-                <div className="flex flex-col items-start justify-between space-y-2 ">
+                {/* <div className="flex flex-col items-start justify-between space-y-2 ">
                   <h2 className="ml-1 font-bold">Buisness ID</h2>
                   <input
                     type="text"
@@ -86,7 +86,7 @@ function LoginPage() {
                     className=" bg-white input input-bordered border-2 border-gray-200 w-full max-w-md"
                     onChange={handleUsernameChange}
                   />
-                </div>
+                </div> */}
                 <div className="flex flex-col items-start justify-between space-y-2">
                   <h2 className="ml-1  font-bold">Email</h2>
                   <input
@@ -108,31 +108,37 @@ function LoginPage() {
                 </div>
               </div>
               <div className="card-actions justify-center w-4/5">
-                <Link className="w-full" to={`/dashboard/super/home`}>
+                {/* <Link className="w-full" to={`/dashboard/super/home`}>
                   <button
                     className="btn btn-active w-full bg-indigo-700 rounded-xl max-w-md"
                     type="submit"
                   >
                     <span className="text-white"> Login </span>
                   </button>
-                </Link>
+                </Link> */}
                 {/* <div className="w-full  flex flex-row justify-center items-center rounded-xl"> */}
                 <Link className="w-full " to={`/dashboard/agent/aghome`}>
-                  <button
+                  {/* <button
                     className="btn btn-active w-full bg-black rounded-xl max-w-md"
                     type="submit"
                   >
                     <span className="text-white">Agent Login </span>
+                  </button> */}
+                    <button
+                    className="btn btn-active w-full bg-indigo-700 rounded-xl max-w-md"
+                    type="submit"
+                  >
+                    <span className="text-white"> Login </span>
                   </button>
                 </Link>
-                <Link className="w-full " to={`/dashboard/`}>
+                {/* <Link className="w-full " to={`/dashboard/`}>
                   <button
                     className="btn btn-active w-full bg-black rounded-xl max-w-md"
                     type="submit"
                   >
                     <span className="text-white">Tenant Login </span>
                   </button>
-                </Link>
+                </Link> */}
               </div>
             </div>
           </form>

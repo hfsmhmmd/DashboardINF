@@ -28,8 +28,8 @@ function HomePageAgent() {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu bg-white text-base-content min-h-full w-2/6  ">
-            <div className="flex flex-col justify-start items-center bg-white h-screen">
+          <ul className="menu  text-base-content min-h-full w-2/6 overflow-y-hidden ">
+            <div className="flex flex-col justify-start items-center h-screen  overflow-y-hidden">
               <WidgetPhone />
             </div>
           </ul>
